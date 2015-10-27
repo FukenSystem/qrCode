@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="qrCode" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,149 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l9b-P5-p9h">
+                                <rect key="frame" x="16" y="28" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PBV-9D-5zx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="16" y="28" width="368" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0v-EY-IvN">
+                                <rect key="frame" x="464" y="66" width="120" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="bso-7O-XtB"/>
+                                    <constraint firstAttribute="height" constant="30" id="czC-c2-jfg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Generate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="czC-c2-jfg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="czC-c2-jfg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="264" y="66" width="120" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="performButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bk6-wj-YN0"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="voq-ME-vJM">
+                                <rect key="frame" x="189" y="550" width="223" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3PB-Iv-r1E"/>
+                                    <constraint firstAttribute="width" constant="219" id="Lld-MD-gKi"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3PB-Iv-r1E"/>
+                                        <exclude reference="Lld-MD-gKi"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="89" y="550" width="223" height="31"/>
+                                    <mask key="constraints">
+                                        <include reference="3PB-Iv-r1E"/>
+                                        <include reference="Lld-MD-gKi"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="89" y="750" width="223" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="changeImageViewScale:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cba-LV-pEn"/>
+                                </connections>
+                            </slider>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eaw-xA-k4T">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="H8J-Wp-gkI"/>
+                                    <constraint firstAttribute="width" constant="200" id="xuB-cC-U0g"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="H8J-Wp-gkI"/>
+                                        <exclude reference="xuB-cC-U0g"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="H8J-Wp-gkI"/>
+                                        <include reference="xuB-cC-U0g"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="100" y="300" width="200" height="200"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Eaw-xA-k4T" secondAttribute="centerY" id="1xc-Fp-Eky"/>
+                            <constraint firstAttribute="centerX" secondItem="voq-ME-vJM" secondAttribute="centerX" id="6Ov-DX-QZN"/>
+                            <constraint firstItem="l9b-P5-p9h" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="CCh-s2-nZu"/>
+                            <constraint firstItem="d0v-EY-IvN" firstAttribute="trailing" secondItem="l9b-P5-p9h" secondAttribute="trailing" id="CEl-10-0o0"/>
+                            <constraint firstItem="l9b-P5-p9h" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="R6U-FE-xlJ"/>
+                            <constraint firstItem="l9b-P5-p9h" firstAttribute="centerX" secondItem="Eaw-xA-k4T" secondAttribute="centerX" id="dIm-gt-eso"/>
+                            <constraint firstItem="d0v-EY-IvN" firstAttribute="top" secondItem="l9b-P5-p9h" secondAttribute="bottom" constant="8" symbolic="YES" id="gMB-DI-wLO"/>
+                            <constraint firstAttribute="centerY" secondItem="voq-ME-vJM" secondAttribute="centerY" constant="-200" id="h14-1x-eRb"/>
+                            <constraint firstAttribute="centerX" secondItem="Eaw-xA-k4T" secondAttribute="centerX" id="th8-Uz-pbZ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CCh-s2-nZu"/>
+                                <exclude reference="R6U-FE-xlJ"/>
+                                <exclude reference="dIm-gt-eso"/>
+                                <exclude reference="1xc-Fp-Eky"/>
+                                <exclude reference="th8-Uz-pbZ"/>
+                                <exclude reference="CEl-10-0o0"/>
+                                <exclude reference="gMB-DI-wLO"/>
+                                <exclude reference="6Ov-DX-QZN"/>
+                                <exclude reference="h14-1x-eRb"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="CCh-s2-nZu"/>
+                                <include reference="R6U-FE-xlJ"/>
+                                <include reference="dIm-gt-eso"/>
+                                <include reference="1xc-Fp-Eky"/>
+                                <include reference="th8-Uz-pbZ"/>
+                                <include reference="CEl-10-0o0"/>
+                                <include reference="gMB-DI-wLO"/>
+                                <include reference="6Ov-DX-QZN"/>
+                                <include reference="h14-1x-eRb"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="btnAction" destination="d0v-EY-IvN" id="fFj-aX-rhi"/>
+                        <outlet property="imgQRCode" destination="Eaw-xA-k4T" id="wUZ-FT-0fG"/>
+                        <outlet property="slider" destination="voq-ME-vJM" id="nJg-4M-dKr"/>
+                        <outlet property="textField" destination="l9b-P5-p9h" id="klY-aK-aAK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="324" y="226"/>
         </scene>
     </scenes>
 </document>
