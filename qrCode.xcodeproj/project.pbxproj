@@ -156,6 +156,8 @@
 		71B82B581B3A02C900226882 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = WebAcademyTeam;
 				TargetAttributes = {
@@ -409,6 +411,7 @@
 				71B82B811B3A02CA00226882 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71B82B821B3A02CA00226882 /* Build configuration list for PBXNativeTarget "qrCodeTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +420,7 @@
 				71B82B841B3A02CA00226882 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

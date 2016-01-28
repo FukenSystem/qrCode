@@ -24,8 +24,8 @@ class ViewController: UIViewController {
     
     // this method Remove blur effect from the picture
     func displayQRCodeImage() {
-        let scaleX = imgQRCode.frame.size.width / qrcodeImage.extent().size.width
-        let scaleY = imgQRCode.frame.size.height / qrcodeImage.extent().size.height
+        let scaleX = imgQRCode.frame.size.width / qrcodeImage.extent.size.width
+        let scaleY = imgQRCode.frame.size.height / qrcodeImage.extent.size.height
         
         let transformedImage = qrcodeImage.imageByApplyingTransform(CGAffineTransformMakeScale(scaleX, scaleY))
         
@@ -66,6 +66,7 @@ class ViewController: UIViewController {
     @IBAction func changeImageViewScale(sender: AnyObject) {
         imgQRCode.transform = CGAffineTransformMakeScale(CGFloat(slider.value), CGFloat(slider.value))
     }
+    
     
     var qrcodeImage: CIImage!
     
